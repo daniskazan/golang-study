@@ -15,6 +15,19 @@ func intSeq() func() int {
 	}
 }
 
+/*
+or like this:
+func intSeq() func() int {
+	i := 0
+	var function func() int
+	function = func() int {
+		i++
+		return i
+	}
+	return function
+}
+*/
+
 func main() {
 	/*
 		We call intSeq, assigning the result (a function) to nextInt.
