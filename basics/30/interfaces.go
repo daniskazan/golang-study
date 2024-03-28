@@ -42,9 +42,18 @@ func measure(g geometry) {
 	fmt.Println("\n")
 }
 
+func describe(g geometry) {
+	fmt.Printf("(%v, %T)\n", g, g)
+}
+
 func main() {
+	var g geometry
 	r := rect{width: 3, height: 4}
 	c := circle{radius: 5}
+
+	describe(g)
+	describe(r)
+	describe(c)
 
 	measure(r)
 	measure(c)
